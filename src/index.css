@@ -1,0 +1,86 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap');
+
+/* Base Reset (cleaned from your file) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: #fbf9f5;
+  color: #1b1c1a;
+  line-height: 1.5;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif', serif;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Utility Classes (custom extracted) */
+.glass-nav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 9999px;
+}
+
+/* Typography helpers */
+.text-primary {
+  color: #486177;
+}
+
+.text-secondary {
+  color: #735c00;
+}
+
+/* Backgrounds */
+.bg-surface {
+  background-color: #fbf9f5;
+}
+
+.bg-surface-container {
+  background-color: #efeeea;
+}
+
+.bg-primary {
+  background-color: #486177;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #486177;
+  color: white;
+  border-radius: 9999px;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #5a7a94;
+}
+
+/* Card */
+.card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(27, 28, 26, 0.04);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
