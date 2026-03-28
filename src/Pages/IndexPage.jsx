@@ -1,13 +1,18 @@
 import React from 'react'
 import AppHeader from '../Components/AppHeader'
 import AppFooter from '../Components/AppFooter'
-import { Box, Button, Card, CardContent, Container, Divider, Grid, Typography } from '@mui/material'
-import services from '../Data/Data'
+import {IconButton, Box, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Container, Divider, Grid, Typography } from '@mui/material'
+import {services,events} from '../Data/Data'
 import churchImg from '../assets/Church.png'
+import CustomCarousel from '../Components/CustomCarousel'
+
+
 function IndexPage() {
+  
+
 
   return (
-    
+
     <>
       {/* <div>
         <AppHeader />
@@ -353,10 +358,621 @@ backgroundColor:"#0d6dfdae "
       </Container>
     </Box>
 
+{/* News card and carosal view for sakadana */}
+
+{/* Kaisthana Sammidhi */}
+<Box Container sx={{px:5 , py:5}}>
+
+<Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
+  <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
+    Kaisthana Sammidhi
+  </Typography>
+
+  <Button   variant="outlined"
+  sx={{
+    fontSize: { xs: '0.7rem', md: '0.9rem' },
+    px: { xs: 1.5, md: 3 },
+    py: { xs: 0.5, md: 1 },
+  }}>
+    View All
+  </Button>
+</Box>
+
+  
+
+<CustomCarousel>
+  {events
+    .filter(e => e.title1 === "Kaisthana Sammidhi")
+    .map((e, i) => (
+      <Box key={i} sx={{ py:4, minWidth: { xs: '85%', md: '30%' } }}>
+         <Card
+          sx={{
+            height:"450px",
+            borderRadius: '20px',
+            overflow: 'hidden',
+            transition: '0.3s',
+            
+            '&:hover': {
+              transform: 'translateY(-6px)',
+              boxShadow: 6,
+            },
+          }}
+        >
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="180"
+              // e.coverImage ||
+              image={ churchImg}
+              alt={e.title}
+              sx={{
+                transition: '0.4s',
+                '&:hover': { transform: 'scale(1.05)' },
+              }}
+            />
+
+            <CardContent>
+              <Typography variant="caption" color="#735c00">
+                {e.date}
+              </Typography>
+
+              <Typography variant="h6" sx={{ mt: 1, fontWeight: 600 }}>
+                {e.title}
+              </Typography>
+
+              <Typography variant="body2" sx={{ mt: 1, color: '#666',    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    maxWidth: 300, }}>
+                {e.description}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+
+          <CardActions>
+            <Button
+              size="small"
+              sx={{
+                color: '#735c00',
+                fontWeight: 600,
+              }}
+            >
+              Read More →
+            </Button>
+          </CardActions>
+        </Card>
+      </Box>
+    ))}
+</CustomCarousel>
+     
+
+</Box>
 
 
+{/* Sunday School */}
 
+<Box Container sx={{px:5 , py:5}}>
 
+<Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
+  <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
+     Sunday School
+  </Typography>
+
+  <Button   variant="outlined"
+  sx={{
+    fontSize: { xs: '0.7rem', md: '0.9rem' },
+    px: { xs: 1.5, md: 3 },
+    py: { xs: 0.5, md: 1 },
+  }}>
+    View All
+  </Button>
+</Box>
+
+  
+
+<CustomCarousel>
+  {events
+    .filter(e => e.title1 === "Sunday School")
+    .map((e, i) => (
+      <Box key={i} sx={{py:4, minWidth: { xs: '85%', md: '30%' } }}>
+         <Card
+          sx={{
+            height:"450px",
+            borderRadius: '20px',
+            overflow: 'hidden',
+            transition: '0.3s',
+            '&:hover': {
+              transform: 'translateY(-6px)',
+              boxShadow: 6,
+            },
+          }}
+        >
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="180"
+              // e.coverImage ||
+              image={ churchImg}
+              alt={e.title}
+              sx={{
+                transition: '0.4s',
+                '&:hover': { transform: 'scale(1.05)' },
+              }}
+            />
+
+            <CardContent>
+              <Typography variant="caption" color="#735c00">
+                {e.date}
+              </Typography>
+
+              <Typography variant="h6" sx={{ mt: 1, fontWeight: 600 }}>
+                {e.title}
+              </Typography>
+
+              <Typography variant="body2" sx={{ mt: 1, color: '#666',    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    maxWidth: 300, }}>
+                {e.description}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+
+          <CardActions>
+            <Button
+              size="small"
+              sx={{
+                color: '#735c00',
+                fontWeight: 600,
+              }}
+            >
+              Read More →
+            </Button>
+          </CardActions>
+        </Card>
+      </Box>
+    ))}
+</CustomCarousel>
+     
+
+</Box>
+
+{/* Yuvajana Sakhyam */}
+
+<Box Container sx={{px:5 , py:5}}>
+
+<Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
+  <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
+   Yuvajana Sakhyam
+  </Typography>
+
+  <Button   variant="outlined"
+  sx={{
+    fontSize: { xs: '0.7rem', md: '0.9rem' },
+    px: { xs: 1.5, md: 3 },
+    py: { xs: 0.5, md: 1 },
+  }}>
+    View All
+  </Button>
+</Box>
+
+  
+
+<CustomCarousel>
+  {events
+    .filter(e => e.title1 === "Yuvajana Sakhyam")
+    .map((e, i) => (
+      <Box key={i} sx={{py:4, minWidth: { xs: '85%', md: '30%' } }}>
+         <Card
+          sx={{
+            height:"450px",
+            borderRadius: '20px',
+            overflow: 'hidden',
+            transition: '0.3s',
+            '&:hover': {
+              transform: 'translateY(-6px)',
+              boxShadow: 6,
+            },
+          }}
+        >
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="180"
+              // e.coverImage ||
+              image={ churchImg}
+              alt={e.title}
+              sx={{
+                transition: '0.4s',
+                '&:hover': { transform: 'scale(1.05)' },
+              }}
+            />
+
+            <CardContent>
+              <Typography variant="caption" color="#735c00">
+                {e.date}
+              </Typography>
+
+              <Typography variant="h6" sx={{ mt: 1, fontWeight: 600 }}>
+                {e.title}
+              </Typography>
+
+              <Typography variant="body2" sx={{ mt: 1, color: '#666',    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    maxWidth: 300, }}>
+                {e.description}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+
+          <CardActions>
+            <Button
+              size="small"
+              sx={{
+                color: '#735c00',
+                fontWeight: 600,
+              }}
+            >
+              Read More →
+            </Button>
+          </CardActions>
+        </Card>
+      </Box>
+    ))}
+</CustomCarousel>
+     
+
+</Box>
+
+{/* Sevika Sangam */}
+
+<Box Container sx={{px:5 , py:5}}>
+
+<Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
+  <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
+   Sevika Sangam
+  </Typography>
+
+  <Button   variant="outlined"
+  sx={{
+    fontSize: { xs: '0.7rem', md: '0.9rem' },
+    px: { xs: 1.5, md: 3 },
+    py: { xs: 0.5, md: 1 },
+  }}>
+    View All
+  </Button>
+</Box>
+
+  
+
+<CustomCarousel>
+  {events
+    .filter(e => e.title1 === "Kaisthana Sammidhi")
+    .map((e, i) => (
+      <Box key={i} sx={{py:4, minWidth: { xs: '85%', md: '30%' } }}>
+         <Card
+          sx={{
+            height:"450px",
+            borderRadius: '20px',
+            overflow: 'hidden',
+            transition: '0.3s',
+            '&:hover': {
+              transform: 'translateY(-6px)',
+              boxShadow: 6,
+            },
+          }}
+        >
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="180"
+              // e.coverImage ||
+              image={ churchImg}
+              alt={e.title}
+              sx={{
+                transition: '0.4s',
+                '&:hover': { transform: 'scale(1.05)' },
+              }}
+            />
+
+            <CardContent>
+              <Typography variant="caption" color="#735c00">
+                {e.date}
+              </Typography>
+
+              <Typography variant="h6" sx={{ mt: 1, fontWeight: 600 }}>
+                {e.title}
+              </Typography>
+
+              <Typography variant="body2" sx={{ mt: 1, color: '#666',    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    maxWidth: 300, }}>
+                {e.description}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+
+          <CardActions>
+            <Button
+              size="small"
+              sx={{
+                color: '#735c00',
+                fontWeight: 600,
+              }}
+            >
+              Read More →
+            </Button>
+          </CardActions>
+        </Card>
+      </Box>
+    ))}
+</CustomCarousel>
+     
+
+</Box>
+
+{/* Choir */}
+<Box Container sx={{px:5 , py:5}}>
+
+<Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
+  <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
+    Choir
+  </Typography>
+
+  <Button   variant="outlined"
+  sx={{
+    fontSize: { xs: '0.7rem', md: '0.9rem' },
+    px: { xs: 1.5, md: 3 },
+    py: { xs: 0.5, md: 1 },
+  }}>
+    View All
+  </Button>
+</Box>
+
+  
+
+<CustomCarousel>
+  {events
+    .filter(e => e.title1 === "Kaisthana Sammidhi")
+    .map((e, i) => (
+      <Box key={i} sx={{py:4, minWidth: { xs: '85%', md: '30%' } }}>
+         <Card
+          sx={{
+            height:"450px",
+            borderRadius: '20px',
+            overflow: 'hidden',
+            transition: '0.3s',
+            '&:hover': {
+              transform: 'translateY(-6px)',
+              boxShadow: 6,
+            },
+          }}
+        >
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="180"
+              // e.coverImage ||
+              image={ churchImg}
+              alt={e.title}
+              sx={{
+                transition: '0.4s',
+                '&:hover': { transform: 'scale(1.05)' },
+              }}
+            />
+
+            <CardContent>
+              <Typography variant="caption" color="#735c00">
+                {e.date}
+              </Typography>
+
+              <Typography variant="h6" sx={{ mt: 1, fontWeight: 600 }}>
+                {e.title}
+              </Typography>
+
+              <Typography variant="body2" sx={{ mt: 1, color: '#666',    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    maxWidth: 300, }}>
+                {e.description}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+
+          <CardActions>
+            <Button
+              size="small"
+              sx={{
+                color: '#735c00',
+                fontWeight: 600,
+              }}
+            >
+              Read More →
+            </Button>
+          </CardActions>
+        </Card>
+      </Box>
+    ))}
+</CustomCarousel>
+     
+
+</Box>
+
+{/* Edavaka Mission */}
+<Box Container sx={{px:5 , py:5}}>
+
+<Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
+  <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
+   Edavaka Mission 
+  </Typography>
+
+  <Button   variant="outlined"
+  sx={{
+    fontSize: { xs: '0.7rem', md: '0.9rem' },
+    px: { xs: 1.5, md: 3 },
+    py: { xs: 0.5, md: 1 },
+  }}>
+    View All
+  </Button>
+</Box>
+
+  
+
+<CustomCarousel>
+  {events
+    .filter(e => e.title1 === "Kaisthana Sammidhi")
+    .map((e, i) => (
+      <Box key={i} sx={{ py:4,minWidth: { xs: '85%', md: '30%' } }}>
+         <Card
+          sx={{
+            height:"450px",
+            borderRadius: '20px',
+            overflow: 'hidden',
+            transition: '0.3s',
+            '&:hover': {
+              transform: 'translateY(-6px)',
+              boxShadow: 6,
+            },
+          }}
+        >
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="180"
+              // e.coverImage ||
+              image={ churchImg}
+              alt={e.title}
+              sx={{
+                transition: '0.4s',
+                '&:hover': { transform: 'scale(1.05)' },
+              }}
+            />
+
+            <CardContent>
+              <Typography variant="caption" color="#735c00">
+                {e.date}
+              </Typography>
+
+              <Typography variant="h6" sx={{ mt: 1, fontWeight: 600 }}>
+                {e.title}
+              </Typography>
+
+              <Typography variant="body2" sx={{ mt: 1, color: '#666',    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    maxWidth: 300, }}>
+                {e.description}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+
+          <CardActions>
+            <Button
+              size="small"
+              sx={{
+                color: '#735c00',
+                fontWeight: 600,
+              }}
+            >
+              Read More →
+            </Button>
+          </CardActions>
+        </Card>
+      </Box>
+    ))}
+</CustomCarousel>
+     
+
+</Box>
+
+{/* Senior Citizens */}
+<Box Container sx={{px:5 , py:5}}>
+
+<Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
+  <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
+    Senior Citizens
+  </Typography>
+
+  <Button   variant="outlined"
+  sx={{
+    fontSize: { xs: '0.7rem', md: '0.9rem' },
+    px: { xs: 1.5, md: 3 },
+    py: { xs: 0.5, md: 1 },
+  }}>
+    View All
+  </Button>
+</Box>
+
+  
+
+<CustomCarousel>
+  {events
+    .filter(e => e.title1 === "Kaisthana Sammidhi")
+    .map((e, i) => (
+      <Box key={i} sx={{py:4, minWidth: { xs: '85%', md: '30%' } }}>
+         <Card
+          sx={{
+            height:"450px",
+            borderRadius: '20px',
+            overflow: 'hidden',
+            transition: '0.3s',
+            '&:hover': {
+              transform: 'translateY(-6px)',
+              boxShadow: 6,
+            },
+          }}
+        >
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="180"
+              // e.coverImage ||
+              image={ churchImg}
+              alt={e.title}
+              sx={{
+                transition: '0.4s',
+                '&:hover': { transform: 'scale(1.05)' },
+              }}
+            />
+
+            <CardContent>
+              <Typography variant="caption" color="#735c00">
+                {e.date}
+              </Typography>
+
+              <Typography variant="h6" sx={{ mt: 1, fontWeight: 600 }}>
+                {e.title}
+              </Typography>
+
+              <Typography variant="body2" sx={{ mt: 1, color: '#666',    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    maxWidth: 300, }}>
+                {e.description}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+
+          <CardActions>
+            <Button
+              size="small"
+              sx={{
+                color: '#735c00',
+                fontWeight: 600,
+              }}
+            >
+              Read More →
+            </Button>
+          </CardActions>
+        </Card>
+      </Box>
+    ))}
+</CustomCarousel>
+     
+
+</Box>
 
       </Box>
       {/* Body End  */}
