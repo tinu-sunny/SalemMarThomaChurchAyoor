@@ -7,6 +7,7 @@ import churchImg from '../assets/Church.png'
 function IndexPage() {
 
   return (
+    
     <>
       {/* <div>
         <AppHeader />
@@ -86,10 +87,14 @@ function IndexPage() {
                 View Service Timings
               </Button>
               <Button
-                variant="outlined"
+                variant="contained"
                 sx={{
                   borderRadius: "30px",
-                  color: "#fff",
+                 backgroundColor:"transparent",
+                 border:'2px solid #0d6dfdae',
+                 ":hover":{
+backgroundColor:"#0d6dfdae "
+                 },
                   px: { xs: 2, md: 4, lg: 4 },
                 }}
               >
