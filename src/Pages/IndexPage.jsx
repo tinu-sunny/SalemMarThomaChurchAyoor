@@ -14,9 +14,9 @@ function IndexPage() {
   return (
 
     <>
-      {/* <div>
+      <div>
         <AppHeader />
-      </div> */}
+      </div>
 
       {/* Body */}
 
