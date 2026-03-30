@@ -1,7 +1,7 @@
 import React from 'react'
 import AppHeader from '../Components/AppHeader'
 import AppFooter from '../Components/AppFooter'
-import {IconButton, Box, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Container, Divider, Grid, Typography } from '@mui/material'
+import {IconButton, Box, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Container, Divider, Grid, Typography, Tooltip } from '@mui/material'
 import {services,events} from '../Data/Data'
 import churchImg from '../assets/Church.png'
 import CustomCarousel from '../Components/CustomCarousel'
@@ -365,7 +365,7 @@ backgroundColor:"#0d6dfdae "
 
 <Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
   <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
-    Kaisthana Sammidhi
+Kaisthana Sammidhi
   </Typography>
 
   <Button   variant="outlined"
@@ -384,14 +384,18 @@ backgroundColor:"#0d6dfdae "
   {events
     .filter(e => e.title1 === "Kaisthana Sammidhi")
     .map((e, i) => (
-      <Box key={i} sx={{ py:4, minWidth: { xs: '85%', md: '30%' } }}>
+      <Box key={i} sx={{py:4, flex: '0 0 auto',   width: {
+      xs: '100%',     // ✅ full width on mobile
+      sm: '50%',      // tablet
+      md: '33.33%',   // desktop
+    }, }}>
          <Card
           sx={{
-            height:"450px",
+            height:{xs:"350px",md:"450px"},
             borderRadius: '20px',
             overflow: 'hidden',
             transition: '0.3s',
-            
+            scrollSnapAlign: 'start',
             '&:hover': {
               transform: 'translateY(-6px)',
               boxShadow: 6,
@@ -416,9 +420,27 @@ backgroundColor:"#0d6dfdae "
                 {e.date}
               </Typography>
 
-              <Typography variant="h6" sx={{ mt: 1, fontWeight: 600 }}>
-                {e.title}
-              </Typography>
+              <Tooltip title={e.title} arrow>
+  <Typography
+    variant="h6"
+    sx={{
+      mt: 1,
+      fontWeight: 600,
+
+      // 🔥 Line clamp
+      display: '-webkit-box',
+      WebkitLineClamp: { xs: 2, md: 3 }, // mobile 2 lines, desktop 3
+      WebkitBoxOrient: 'vertical',
+      overflow: 'hidden',
+
+      // optional spacing
+      lineHeight: 1.3,
+      minHeight: { xs: '2.6em', md: '1.9em' }, // keeps height consistent
+    }}
+  >
+    {e.title}
+  </Typography>
+</Tooltip>
 
               <Typography variant="body2" sx={{ mt: 1, color: '#666',    whiteSpace: 'nowrap',
     overflow: 'hidden',
@@ -455,7 +477,7 @@ backgroundColor:"#0d6dfdae "
 
 <Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
   <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
-     Sunday School
+Sunday School
   </Typography>
 
   <Button   variant="outlined"
@@ -472,15 +494,20 @@ backgroundColor:"#0d6dfdae "
 
 <CustomCarousel>
   {events
-    .filter(e => e.title1 === "Sunday School")
+    .filter(e => e.title1 === "Kaisthana Sammidhi")
     .map((e, i) => (
-      <Box key={i} sx={{py:4, minWidth: { xs: '85%', md: '30%' } }}>
+      <Box key={i} sx={{py:4, flex: '0 0 auto',   width: {
+      xs: '100%',     // ✅ full width on mobile
+      sm: '50%',      // tablet
+      md: '33.33%',   // desktop
+    }, }}>
          <Card
           sx={{
-            height:"450px",
+            height:{xs:"350px",md:"450px"},
             borderRadius: '20px',
             overflow: 'hidden',
             transition: '0.3s',
+            scrollSnapAlign: 'start',
             '&:hover': {
               transform: 'translateY(-6px)',
               boxShadow: 6,
@@ -505,9 +532,27 @@ backgroundColor:"#0d6dfdae "
                 {e.date}
               </Typography>
 
-              <Typography variant="h6" sx={{ mt: 1, fontWeight: 600 }}>
-                {e.title}
-              </Typography>
+              <Tooltip title={e.title} arrow>
+  <Typography
+    variant="h6"
+    sx={{
+      mt: 1,
+      fontWeight: 600,
+
+      // 🔥 Line clamp
+      display: '-webkit-box',
+      WebkitLineClamp: { xs: 2, md: 3 }, // mobile 2 lines, desktop 3
+      WebkitBoxOrient: 'vertical',
+      overflow: 'hidden',
+
+      // optional spacing
+      lineHeight: 1.3,
+      minHeight: { xs: '2.6em', md: '1.9em' }, // keeps height consistent
+    }}
+  >
+    {e.title}
+  </Typography>
+</Tooltip>
 
               <Typography variant="body2" sx={{ mt: 1, color: '#666',    whiteSpace: 'nowrap',
     overflow: 'hidden',
@@ -543,7 +588,7 @@ backgroundColor:"#0d6dfdae "
 
 <Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
   <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
-   Yuvajana Sakhyam
+Yuvajana Sakhyam
   </Typography>
 
   <Button   variant="outlined"
@@ -560,15 +605,20 @@ backgroundColor:"#0d6dfdae "
 
 <CustomCarousel>
   {events
-    .filter(e => e.title1 === "Yuvajana Sakhyam")
+    .filter(e => e.title1 === "Kaisthana Sammidhi")
     .map((e, i) => (
-      <Box key={i} sx={{py:4, minWidth: { xs: '85%', md: '30%' } }}>
+      <Box key={i} sx={{py:4, flex: '0 0 auto',   width: {
+      xs: '100%',     // ✅ full width on mobile
+      sm: '50%',      // tablet
+      md: '33.33%',   // desktop
+    }, }}>
          <Card
           sx={{
-            height:"450px",
+            height:{xs:"350px",md:"450px"},
             borderRadius: '20px',
             overflow: 'hidden',
             transition: '0.3s',
+            scrollSnapAlign: 'start',
             '&:hover': {
               transform: 'translateY(-6px)',
               boxShadow: 6,
@@ -593,9 +643,27 @@ backgroundColor:"#0d6dfdae "
                 {e.date}
               </Typography>
 
-              <Typography variant="h6" sx={{ mt: 1, fontWeight: 600 }}>
-                {e.title}
-              </Typography>
+              <Tooltip title={e.title} arrow>
+  <Typography
+    variant="h6"
+    sx={{
+      mt: 1,
+      fontWeight: 600,
+
+      // 🔥 Line clamp
+      display: '-webkit-box',
+      WebkitLineClamp: { xs: 2, md: 3 }, // mobile 2 lines, desktop 3
+      WebkitBoxOrient: 'vertical',
+      overflow: 'hidden',
+
+      // optional spacing
+      lineHeight: 1.3,
+      minHeight: { xs: '2.6em', md: '1.9em' }, // keeps height consistent
+    }}
+  >
+    {e.title}
+  </Typography>
+</Tooltip>
 
               <Typography variant="body2" sx={{ mt: 1, color: '#666',    whiteSpace: 'nowrap',
     overflow: 'hidden',
@@ -631,7 +699,7 @@ backgroundColor:"#0d6dfdae "
 
 <Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
   <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
-   Sevika Sangam
+Sevika Sangam
   </Typography>
 
   <Button   variant="outlined"
@@ -650,13 +718,18 @@ backgroundColor:"#0d6dfdae "
   {events
     .filter(e => e.title1 === "Kaisthana Sammidhi")
     .map((e, i) => (
-      <Box key={i} sx={{py:4, minWidth: { xs: '85%', md: '30%' } }}>
+      <Box key={i} sx={{py:4, flex: '0 0 auto',   width: {
+      xs: '100%',     // ✅ full width on mobile
+      sm: '50%',      // tablet
+      md: '33.33%',   // desktop
+    }, }}>
          <Card
           sx={{
-            height:"450px",
+            height:{xs:"350px",md:"450px"},
             borderRadius: '20px',
             overflow: 'hidden',
             transition: '0.3s',
+            scrollSnapAlign: 'start',
             '&:hover': {
               transform: 'translateY(-6px)',
               boxShadow: 6,
@@ -681,9 +754,27 @@ backgroundColor:"#0d6dfdae "
                 {e.date}
               </Typography>
 
-              <Typography variant="h6" sx={{ mt: 1, fontWeight: 600 }}>
-                {e.title}
-              </Typography>
+              <Tooltip title={e.title} arrow>
+  <Typography
+    variant="h6"
+    sx={{
+      mt: 1,
+      fontWeight: 600,
+
+      // 🔥 Line clamp
+      display: '-webkit-box',
+      WebkitLineClamp: { xs: 2, md: 3 }, // mobile 2 lines, desktop 3
+      WebkitBoxOrient: 'vertical',
+      overflow: 'hidden',
+
+      // optional spacing
+      lineHeight: 1.3,
+      minHeight: { xs: '2.6em', md: '1.9em' }, // keeps height consistent
+    }}
+  >
+    {e.title}
+  </Typography>
+</Tooltip>
 
               <Typography variant="body2" sx={{ mt: 1, color: '#666',    whiteSpace: 'nowrap',
     overflow: 'hidden',
@@ -718,7 +809,7 @@ backgroundColor:"#0d6dfdae "
 
 <Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
   <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
-    Choir
+   Choir
   </Typography>
 
   <Button   variant="outlined"
@@ -737,13 +828,18 @@ backgroundColor:"#0d6dfdae "
   {events
     .filter(e => e.title1 === "Kaisthana Sammidhi")
     .map((e, i) => (
-      <Box key={i} sx={{py:4, minWidth: { xs: '85%', md: '30%' } }}>
+      <Box key={i} sx={{py:4, flex: '0 0 auto',   width: {
+      xs: '100%',     // ✅ full width on mobile
+      sm: '50%',      // tablet
+      md: '33.33%',   // desktop
+    }, }}>
          <Card
           sx={{
-            height:"450px",
+            height:{xs:"350px",md:"450px"},
             borderRadius: '20px',
             overflow: 'hidden',
             transition: '0.3s',
+            scrollSnapAlign: 'start',
             '&:hover': {
               transform: 'translateY(-6px)',
               boxShadow: 6,
@@ -768,9 +864,27 @@ backgroundColor:"#0d6dfdae "
                 {e.date}
               </Typography>
 
-              <Typography variant="h6" sx={{ mt: 1, fontWeight: 600 }}>
-                {e.title}
-              </Typography>
+              <Tooltip title={e.title} arrow>
+  <Typography
+    variant="h6"
+    sx={{
+      mt: 1,
+      fontWeight: 600,
+
+      // 🔥 Line clamp
+      display: '-webkit-box',
+      WebkitLineClamp: { xs: 2, md: 3 }, // mobile 2 lines, desktop 3
+      WebkitBoxOrient: 'vertical',
+      overflow: 'hidden',
+
+      // optional spacing
+      lineHeight: 1.3,
+      minHeight: { xs: '2.6em', md: '1.9em' }, // keeps height consistent
+    }}
+  >
+    {e.title}
+  </Typography>
+</Tooltip>
 
               <Typography variant="body2" sx={{ mt: 1, color: '#666',    whiteSpace: 'nowrap',
     overflow: 'hidden',
@@ -805,7 +919,7 @@ backgroundColor:"#0d6dfdae "
 
 <Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
   <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
-   Edavaka Mission 
+   Edavaka Mission
   </Typography>
 
   <Button   variant="outlined"
@@ -824,13 +938,18 @@ backgroundColor:"#0d6dfdae "
   {events
     .filter(e => e.title1 === "Kaisthana Sammidhi")
     .map((e, i) => (
-      <Box key={i} sx={{ py:4,minWidth: { xs: '85%', md: '30%' } }}>
+      <Box key={i} sx={{py:4, flex: '0 0 auto',   width: {
+      xs: '100%',     // ✅ full width on mobile
+      sm: '50%',      // tablet
+      md: '33.33%',   // desktop
+    }, }}>
          <Card
           sx={{
-            height:"450px",
+            height:{xs:"350px",md:"450px"},
             borderRadius: '20px',
             overflow: 'hidden',
             transition: '0.3s',
+            scrollSnapAlign: 'start',
             '&:hover': {
               transform: 'translateY(-6px)',
               boxShadow: 6,
@@ -855,9 +974,27 @@ backgroundColor:"#0d6dfdae "
                 {e.date}
               </Typography>
 
-              <Typography variant="h6" sx={{ mt: 1, fontWeight: 600 }}>
-                {e.title}
-              </Typography>
+              <Tooltip title={e.title} arrow>
+  <Typography
+    variant="h6"
+    sx={{
+      mt: 1,
+      fontWeight: 600,
+
+      // 🔥 Line clamp
+      display: '-webkit-box',
+      WebkitLineClamp: { xs: 2, md: 3 }, // mobile 2 lines, desktop 3
+      WebkitBoxOrient: 'vertical',
+      overflow: 'hidden',
+
+      // optional spacing
+      lineHeight: 1.3,
+      minHeight: { xs: '2.6em', md: '1.9em' }, // keeps height consistent
+    }}
+  >
+    {e.title}
+  </Typography>
+</Tooltip>
 
               <Typography variant="body2" sx={{ mt: 1, color: '#666',    whiteSpace: 'nowrap',
     overflow: 'hidden',
@@ -911,13 +1048,18 @@ backgroundColor:"#0d6dfdae "
   {events
     .filter(e => e.title1 === "Kaisthana Sammidhi")
     .map((e, i) => (
-      <Box key={i} sx={{py:4, minWidth: { xs: '85%', md: '30%' } }}>
+      <Box key={i} sx={{py:4, flex: '0 0 auto',   width: {
+      xs: '100%',     // ✅ full width on mobile
+      sm: '50%',      // tablet
+      md: '33.33%',   // desktop
+    }, }}>
          <Card
           sx={{
-            height:"450px",
+            height:{xs:"350px",md:"450px"},
             borderRadius: '20px',
             overflow: 'hidden',
             transition: '0.3s',
+            scrollSnapAlign: 'start',
             '&:hover': {
               transform: 'translateY(-6px)',
               boxShadow: 6,
@@ -942,9 +1084,27 @@ backgroundColor:"#0d6dfdae "
                 {e.date}
               </Typography>
 
-              <Typography variant="h6" sx={{ mt: 1, fontWeight: 600 }}>
-                {e.title}
-              </Typography>
+              <Tooltip title={e.title} arrow>
+  <Typography
+    variant="h6"
+    sx={{
+      mt: 1,
+      fontWeight: 600,
+
+      // 🔥 Line clamp
+      display: '-webkit-box',
+      WebkitLineClamp: { xs: 2, md: 3 }, // mobile 2 lines, desktop 3
+      WebkitBoxOrient: 'vertical',
+      overflow: 'hidden',
+
+      // optional spacing
+      lineHeight: 1.3,
+      minHeight: { xs: '2.6em', md: '1.9em' }, // keeps height consistent
+    }}
+  >
+    {e.title}
+  </Typography>
+</Tooltip>
 
               <Typography variant="body2" sx={{ mt: 1, color: '#666',    whiteSpace: 'nowrap',
     overflow: 'hidden',

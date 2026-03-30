@@ -67,7 +67,7 @@ const CustomCarousel = ({ children }) => {
           display: 'flex',
           overflowX: 'auto',
           gap: 3,
-          px: 5,
+         px: { xs: 2, md: 5 },  
           scrollSnapType: 'x mandatory',
           '&::-webkit-scrollbar': { display: 'none' },
         }}
