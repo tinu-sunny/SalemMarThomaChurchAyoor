@@ -977,9 +977,9 @@ backgroundColor:"#0d6dfdae "
       </Box>
       {/* Body End  */}
 
-      {/* <div>
+      <div>
         <AppFooter />
-      </div> */}
+      </div>
     </>
   );
 }
