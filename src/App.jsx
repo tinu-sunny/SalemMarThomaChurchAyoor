@@ -5,6 +5,7 @@ import IndexPage from './Pages/IndexPage'
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import LoaderWithIcon from './Loader/LoaderWithIcon';
+import AboutPage from './Pages/AboutPage';
 function App() {
  
  const location = useLocation();
@@ -24,6 +25,7 @@ function App() {
      {loading && <LoaderWithIcon />}
  <Routes>
   <Route path='/' element={<IndexPage/>}/>
+  <Route path='/about' element={<AboutPage/>}/>
  </Routes>
     </>
   )

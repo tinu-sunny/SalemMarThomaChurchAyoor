@@ -14,9 +14,18 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../assets/MTC_logo.webp'
+import { Link } from 'react-router-dom';
 function AppHeader() {
 
-const pages = ['Home', 'About', 'Worship', 'Ministries', 'Events', 'Gallery', 'Contact'];
+const pages = [
+  { title: "Home", link: "/" },
+  { title: "About", link: "/about" },
+  { title: "Worship", link: "/worship" },
+  { title: "Ministries", link: "/ministries" },
+  { title: "Events", link: "/events" },
+  { title: "Gallery", link: "/gallery" },
+  { title: "Contact", link: "/contact" }
+];
   const [open, setOpen] = useState(false);
   const [show, setShow] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);
@@ -76,19 +85,21 @@ const pages = ['Home', 'About', 'Worship', 'Ministries', 'Events', 'Gallery', 'C
             {/* DESKTOP MENU */}
             <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 3 }}>
               {pages.map((item) => (
-                <Button
-                  key={item}
-                  sx={{
-                    color: '#486177',
-                    fontWeight: 500,
-                    position: 'relative',
-                    '&:hover': {
-                      color: '#735c00',
-                    },
-                  }}
-                >
-                  {item}
-                </Button>
+               <Link to={item.link}>
+                  <Button
+                    key={item}
+                    sx={{
+                      color: '#486177',
+                      fontWeight: 500,
+                      position: 'relative',
+                      '&:hover': {
+                        color: '#735c00',
+                      },
+                    }}
+                  >
+                    {item.title}
+                  </Button>
+               </Link>
               ))}
             </Box>
 
@@ -114,11 +125,16 @@ const pages = ['Home', 'About', 'Worship', 'Ministries', 'Events', 'Gallery', 'C
           <List>
             {pages.map((item) => (
               <ListItem
+                 component={Link}
+            to={item.link}
                 button
                 key={item}
                 onClick={() => setOpen(false)}
+                sx={{
+                  color:"#735c00"
+                }}
               >
-                <ListItemText primary={item} />
+                <ListItemText primary={item.title} />
               </ListItem>
             ))}
           </List>

@@ -135,7 +135,7 @@ function AppFooter() {
         </Typography>
 
         <Typography variant="body2" color="#486177">
-          © 2024 All rights reserved
+          © 2026 All rights reserved
         </Typography>
       </Box>
 
