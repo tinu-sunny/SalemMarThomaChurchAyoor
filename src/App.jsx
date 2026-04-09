@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import LoaderWithIcon from './Loader/LoaderWithIcon';
 import AboutPage from './Pages/AboutPage';
+import PNF from './Pages/PNF';
 function App() {
  
  const location = useLocation();
@@ -26,6 +27,7 @@ function App() {
  <Routes>
   <Route path='/' element={<IndexPage/>}/>
   <Route path='/about' element={<AboutPage/>}/>
+  <Route path='*' element={<PNF/>}/>
  </Routes>
     </>
   )
