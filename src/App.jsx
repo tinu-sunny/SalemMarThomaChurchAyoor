@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import LoaderWithIcon from './Loader/LoaderWithIcon';
 import AboutPage from './Pages/AboutPage';
 import PNF from './Pages/PNF';
+import Gallery from './Pages/Gallery';
 function App() {
  
  const location = useLocation();
@@ -27,6 +28,8 @@ function App() {
  <Routes>
   <Route path='/' element={<IndexPage/>}/>
   <Route path='/about' element={<AboutPage/>}/>
+  <Route path='/gallery' element={<Gallery/>}/>
+
   <Route path='*' element={<PNF/>}/>
  </Routes>
     </>
