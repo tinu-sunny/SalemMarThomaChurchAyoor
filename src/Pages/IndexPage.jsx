@@ -392,9 +392,12 @@ Kaisthana Sammidhi
     }, }}>
          <Card
           sx={{
-            height:{xs:"350px",md:"450px"},
+            minHeight: { xs: '380px', md: '440px' },
             borderRadius: '20px',
             overflow: 'hidden',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
             transition: '0.3s',
             scrollSnapAlign: 'start',
             '&:hover': {
@@ -403,10 +406,10 @@ Kaisthana Sammidhi
             },
           }}
         >
-          <CardActionArea>
+          <CardActionArea sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'stretch' }}>
             <CardMedia
               component="img"
-              height="180"
+              height="200"
               // e.coverImage ||
               image={ churchImg}
               alt={e.title}
@@ -416,7 +419,7 @@ Kaisthana Sammidhi
               }}
             />
 
-            <CardContent>
+            <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="caption" color="#735c00">
                 {e.date}
               </Typography>
@@ -452,7 +455,7 @@ Kaisthana Sammidhi
             </CardContent>
           </CardActionArea>
 
-          <CardActions>
+          <CardActions sx={{ px: 2, pb: 2, pt: 0 }}>
             <Button
               size="small"
               sx={{
@@ -504,9 +507,12 @@ Sunday School
     }, }}>
          <Card
           sx={{
-            height:{xs:"350px",md:"450px"},
+            minHeight: { xs: '380px', md: '440px' },
             borderRadius: '20px',
             overflow: 'hidden',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
             transition: '0.3s',
             scrollSnapAlign: 'start',
             '&:hover': {
@@ -515,10 +521,10 @@ Sunday School
             },
           }}
         >
-          <CardActionArea>
+          <CardActionArea sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'stretch' }}>
             <CardMedia
               component="img"
-              height="180"
+              height="200"
               // e.coverImage ||
               image={ churchImg}
               alt={e.title}
@@ -528,7 +534,7 @@ Sunday School
               }}
             />
 
-            <CardContent>
+            <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="caption" color="#735c00">
                 {e.date}
               </Typography>
@@ -564,7 +570,7 @@ Sunday School
             </CardContent>
           </CardActionArea>
 
-          <CardActions>
+          <CardActions sx={{ px: 2, pb: 2, pt: 0 }}>
             <Button
               size="small"
               sx={{
@@ -615,9 +621,12 @@ Yuvajana Sakhyam
     }, }}>
          <Card
           sx={{
-            height:{xs:"350px",md:"450px"},
+            minHeight: { xs: '380px', md: '440px' },
             borderRadius: '20px',
             overflow: 'hidden',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
             transition: '0.3s',
             scrollSnapAlign: 'start',
             '&:hover': {
@@ -626,10 +635,10 @@ Yuvajana Sakhyam
             },
           }}
         >
-          <CardActionArea>
+          <CardActionArea sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'stretch' }}>
             <CardMedia
               component="img"
-              height="180"
+              height="200"
               // e.coverImage ||
               image={ churchImg}
               alt={e.title}
@@ -639,7 +648,7 @@ Yuvajana Sakhyam
               }}
             />
 
-            <CardContent>
+            <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="caption" color="#735c00">
                 {e.date}
               </Typography>
@@ -675,7 +684,7 @@ Yuvajana Sakhyam
             </CardContent>
           </CardActionArea>
 
-          <CardActions>
+          <CardActions sx={{ px: 2, pb: 2, pt: 0 }}>
             <Button
               size="small"
               sx={{
@@ -726,9 +735,12 @@ Sevika Sangam
     }, }}>
          <Card
           sx={{
-            height:{xs:"350px",md:"450px"},
+            minHeight: { xs: '380px', md: '440px' },
             borderRadius: '20px',
             overflow: 'hidden',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
             transition: '0.3s',
             scrollSnapAlign: 'start',
             '&:hover': {
@@ -737,10 +749,10 @@ Sevika Sangam
             },
           }}
         >
-          <CardActionArea>
+          <CardActionArea sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'stretch' }}>
             <CardMedia
               component="img"
-              height="180"
+              height="200"
               // e.coverImage ||
               image={ churchImg}
               alt={e.title}
@@ -750,7 +762,7 @@ Sevika Sangam
               }}
             />
 
-            <CardContent>
+            <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="caption" color="#735c00">
                 {e.date}
               </Typography>
@@ -786,7 +798,7 @@ Sevika Sangam
             </CardContent>
           </CardActionArea>
 
-          <CardActions>
+          <CardActions sx={{ px: 2, pb: 2, pt: 0 }}>
             <Button
               size="small"
               sx={{
@@ -836,9 +848,12 @@ Sevika Sangam
     }, }}>
          <Card
           sx={{
-            height:{xs:"350px",md:"450px"},
+            minHeight: { xs: '380px', md: '440px' },
             borderRadius: '20px',
             overflow: 'hidden',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
             transition: '0.3s',
             scrollSnapAlign: 'start',
             '&:hover': {
@@ -847,10 +862,10 @@ Sevika Sangam
             },
           }}
         >
-          <CardActionArea>
+          <CardActionArea sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'stretch' }}>
             <CardMedia
               component="img"
-              height="180"
+              height="200"
               // e.coverImage ||
               image={ churchImg}
               alt={e.title}
@@ -860,7 +875,7 @@ Sevika Sangam
               }}
             />
 
-            <CardContent>
+            <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="caption" color="#735c00">
                 {e.date}
               </Typography>
@@ -896,7 +911,7 @@ Sevika Sangam
             </CardContent>
           </CardActionArea>
 
-          <CardActions>
+          <CardActions sx={{ px: 2, pb: 2, pt: 0 }}>
             <Button
               size="small"
               sx={{
@@ -946,9 +961,12 @@ Sevika Sangam
     }, }}>
          <Card
           sx={{
-            height:{xs:"350px",md:"450px"},
+            minHeight: { xs: '380px', md: '440px' },
             borderRadius: '20px',
             overflow: 'hidden',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
             transition: '0.3s',
             scrollSnapAlign: 'start',
             '&:hover': {
@@ -957,10 +975,10 @@ Sevika Sangam
             },
           }}
         >
-          <CardActionArea>
+          <CardActionArea sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'stretch' }}>
             <CardMedia
               component="img"
-              height="180"
+              height="200"
               // e.coverImage ||
               image={ churchImg}
               alt={e.title}
@@ -970,7 +988,7 @@ Sevika Sangam
               }}
             />
 
-            <CardContent>
+            <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="caption" color="#735c00">
                 {e.date}
               </Typography>
@@ -1006,7 +1024,7 @@ Sevika Sangam
             </CardContent>
           </CardActionArea>
 
-          <CardActions>
+          <CardActions sx={{ px: 2, pb: 2, pt: 0 }}>
             <Button
               size="small"
               sx={{
@@ -1056,9 +1074,12 @@ Sevika Sangam
     }, }}>
          <Card
           sx={{
-            height:{xs:"350px",md:"450px"},
+            minHeight: { xs: '380px', md: '440px' },
             borderRadius: '20px',
             overflow: 'hidden',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
             transition: '0.3s',
             scrollSnapAlign: 'start',
             '&:hover': {
@@ -1067,10 +1088,10 @@ Sevika Sangam
             },
           }}
         >
-          <CardActionArea>
+          <CardActionArea sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'stretch' }}>
             <CardMedia
               component="img"
-              height="180"
+              height="200"
               // e.coverImage ||
               image={ churchImg}
               alt={e.title}
@@ -1080,7 +1101,7 @@ Sevika Sangam
               }}
             />
 
-            <CardContent>
+            <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="caption" color="#735c00">
                 {e.date}
               </Typography>
@@ -1116,7 +1137,7 @@ Sevika Sangam
             </CardContent>
           </CardActionArea>
 
-          <CardActions>
+          <CardActions sx={{ px: 2, pb: 2, pt: 0 }}>
             <Button
               size="small"
               sx={{
