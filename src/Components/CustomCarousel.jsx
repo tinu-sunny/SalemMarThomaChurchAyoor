@@ -53,12 +53,60 @@ const CustomCarousel = ({ children }) => {
 
   return (
     <Box sx={{ position: 'relative' }}>
-      <IconButton onClick={scrollLeft} sx={{ position: 'absolute', left: 0, top: '50%', zIndex: 2 }}>
-        <ArrowBackIosNewIcon />
+      <IconButton
+        onClick={scrollLeft}
+        aria-label="Previous"
+        sx={{
+          position: 'absolute',
+          left: { xs: 6, md: 10 },
+          top: { xs: '130px', md: '140px' },
+          transform: 'translateY(-50%)',
+          zIndex: 3,
+          backgroundColor: 'rgba(255, 255, 255, 0.4)',
+          color: 'rgba(0, 0, 0, 0.7)',
+          backdropFilter: 'blur(4px)',
+          border: '1px solid rgba(255, 255, 255, 0.5)',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+          width: { xs: 34, md: 42 },
+          height: { xs: 34, md: 42 },
+          transition: 'all 0.25s ease',
+          '&:hover': {
+            backgroundColor: '#ffffff',
+            color: '#111',
+            boxShadow: '0 4px 14px rgba(0,0,0,0.22)',
+            transform: 'translateY(-50%) scale(1.08)',
+          },
+        }}
+      >
+        <ArrowBackIosNewIcon sx={{ fontSize: { xs: '0.9rem', md: '1.1rem' }, ml: '-2px' }} />
       </IconButton>
 
-      <IconButton onClick={scrollRight} sx={{ position: 'absolute', right: 0, top: '50%', zIndex: 2 }}>
-        <ArrowForwardIosIcon />
+      <IconButton
+        onClick={scrollRight}
+        aria-label="Next"
+        sx={{
+          position: 'absolute',
+          right: { xs: 6, md: 10 },
+          top: { xs: '130px', md: '140px' },
+          transform: 'translateY(-50%)',
+          zIndex: 3,
+          backgroundColor: 'rgba(255, 255, 255, 0.4)',
+          color: 'rgba(0, 0, 0, 0.7)',
+          backdropFilter: 'blur(4px)',
+          border: '1px solid rgba(255, 255, 255, 0.5)',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+          width: { xs: 34, md: 42 },
+          height: { xs: 34, md: 42 },
+          transition: 'all 0.25s ease',
+          '&:hover': {
+            backgroundColor: '#ffffff',
+            color: '#111',
+            boxShadow: '0 4px 14px rgba(0,0,0,0.22)',
+            transform: 'translateY(-50%) scale(1.08)',
+          },
+        }}
+      >
+        <ArrowForwardIosIcon sx={{ fontSize: { xs: '0.9rem', md: '1.1rem' } }} />
       </IconButton>
 
       <Box
@@ -66,8 +114,6 @@ const CustomCarousel = ({ children }) => {
         sx={{
           display: 'flex',
           overflowX: 'auto',
-          gap: 3,
-         px: { xs: 2, md: 5 },  
           scrollSnapType: 'x mandatory',
           '&::-webkit-scrollbar': { display: 'none' },
         }}

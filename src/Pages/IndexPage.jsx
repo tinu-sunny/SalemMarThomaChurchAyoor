@@ -362,7 +362,7 @@ backgroundColor:"#0d6dfdae "
 {/* News card and carosal view for sakadana */}
 
 {/* Kaisthana Sammidhi */}
-<Box Container sx={{px:5 , py:5}}>
+<Box sx={{ px: { xs: 2, sm: 3, md: 5 }, py: { xs: 3, md: 5 } }}>
 
 <Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
   <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
@@ -385,11 +385,17 @@ Kaisthana Sammidhi
   {events
     .filter(e => e.title1 === "Kaisthana Sammidhi")
     .map((e, i) => (
-      <Box key={i} sx={{py:4, flex: '0 0 auto',   width: {
-      xs: '100%',     // ✅ full width on mobile
-      sm: '50%',      // tablet
-      md: '33.33%',   // desktop
-    }, }}>
+      <Box key={i} sx={{
+        py: 4,
+        px: { xs: 0, sm: 1, md: 1.5 },
+        flex: '0 0 auto',
+        width: {
+          xs: '100%',
+          sm: '50%',
+          md: '33.333%',
+        },
+        boxSizing: 'border-box',
+      }}>
          <Card
           sx={{
             minHeight: { xs: '380px', md: '440px' },
@@ -477,7 +483,7 @@ Kaisthana Sammidhi
 
 {/* Sunday School */}
 
-<Box Container sx={{px:5 , py:5}}>
+<Box sx={{ px: { xs: 2, sm: 3, md: 5 }, py: { xs: 3, md: 5 } }}>
 
 <Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
   <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
@@ -500,11 +506,17 @@ Sunday School
   {events
     .filter(e => e.title1 === "Kaisthana Sammidhi")
     .map((e, i) => (
-      <Box key={i} sx={{py:4, flex: '0 0 auto',   width: {
-      xs: '100%',     // ✅ full width on mobile
-      sm: '50%',      // tablet
-      md: '33.33%',   // desktop
-    }, }}>
+      <Box key={i} sx={{
+        py: 4,
+        px: { xs: 0, sm: 1, md: 1.5 },
+        flex: '0 0 auto',
+        width: {
+          xs: '100%',
+          sm: '50%',
+          md: '33.333%',
+        },
+        boxSizing: 'border-box',
+      }}>
          <Card
           sx={{
             minHeight: { xs: '380px', md: '440px' },
@@ -591,7 +603,7 @@ Sunday School
 
 {/* Yuvajana Sakhyam */}
 
-<Box Container sx={{px:5 , py:5}}>
+<Box sx={{ px: { xs: 2, sm: 3, md: 5 }, py: { xs: 3, md: 5 } }}>
 
 <Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
   <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
@@ -614,11 +626,17 @@ Yuvajana Sakhyam
   {events
     .filter(e => e.title1 === "Kaisthana Sammidhi")
     .map((e, i) => (
-      <Box key={i} sx={{py:4, flex: '0 0 auto',   width: {
-      xs: '100%',     // ✅ full width on mobile
-      sm: '50%',      // tablet
-      md: '33.33%',   // desktop
-    }, }}>
+      <Box key={i} sx={{
+        py: 4,
+        px: { xs: 0, sm: 1, md: 1.5 },
+        flex: '0 0 auto',
+        width: {
+          xs: '100%',
+          sm: '50%',
+          md: '33.333%',
+        },
+        boxSizing: 'border-box',
+      }}>
          <Card
           sx={{
             minHeight: { xs: '380px', md: '440px' },
@@ -705,7 +723,7 @@ Yuvajana Sakhyam
 
 {/* Sevika Sangam */}
 
-<Box Container sx={{px:5 , py:5}}>
+<Box sx={{ px: { xs: 2, sm: 3, md: 5 }, py: { xs: 3, md: 5 } }}>
 
 <Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
   <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
@@ -728,11 +746,17 @@ Sevika Sangam
   {events
     .filter(e => e.title1 === "Kaisthana Sammidhi")
     .map((e, i) => (
-      <Box key={i} sx={{py:4, flex: '0 0 auto',   width: {
-      xs: '100%',     // ✅ full width on mobile
-      sm: '50%',      // tablet
-      md: '33.33%',   // desktop
-    }, }}>
+      <Box key={i} sx={{
+        py: 4,
+        px: { xs: 0, sm: 1, md: 1.5 },
+        flex: '0 0 auto',
+        width: {
+          xs: '100%',
+          sm: '50%',
+          md: '33.333%',
+        },
+        boxSizing: 'border-box',
+      }}>
          <Card
           sx={{
             minHeight: { xs: '380px', md: '440px' },
@@ -818,7 +842,7 @@ Sevika Sangam
 </Box>
 
 {/* Choir */}
-<Box Container sx={{px:5 , py:5}}>
+<Box sx={{ px: { xs: 2, sm: 3, md: 5 }, py: { xs: 3, md: 5 } }}>
 
 <Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
   <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
@@ -841,11 +865,17 @@ Sevika Sangam
   {events
     .filter(e => e.title1 === "Kaisthana Sammidhi")
     .map((e, i) => (
-      <Box key={i} sx={{py:4, flex: '0 0 auto',   width: {
-      xs: '100%',     // ✅ full width on mobile
-      sm: '50%',      // tablet
-      md: '33.33%',   // desktop
-    }, }}>
+      <Box key={i} sx={{
+        py: 4,
+        px: { xs: 0, sm: 1, md: 1.5 },
+        flex: '0 0 auto',
+        width: {
+          xs: '100%',
+          sm: '50%',
+          md: '33.333%',
+        },
+        boxSizing: 'border-box',
+      }}>
          <Card
           sx={{
             minHeight: { xs: '380px', md: '440px' },
@@ -931,7 +961,7 @@ Sevika Sangam
 </Box>
 
 {/* Edavaka Mission */}
-<Box Container sx={{px:5 , py:5}}>
+<Box sx={{ px: { xs: 2, sm: 3, md: 5 }, py: { xs: 3, md: 5 } }}>
 
 <Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
   <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
@@ -954,11 +984,17 @@ Sevika Sangam
   {events
     .filter(e => e.title1 === "Kaisthana Sammidhi")
     .map((e, i) => (
-      <Box key={i} sx={{py:4, flex: '0 0 auto',   width: {
-      xs: '100%',     // ✅ full width on mobile
-      sm: '50%',      // tablet
-      md: '33.33%',   // desktop
-    }, }}>
+      <Box key={i} sx={{
+        py: 4,
+        px: { xs: 0, sm: 1, md: 1.5 },
+        flex: '0 0 auto',
+        width: {
+          xs: '100%',
+          sm: '50%',
+          md: '33.333%',
+        },
+        boxSizing: 'border-box',
+      }}>
          <Card
           sx={{
             minHeight: { xs: '380px', md: '440px' },
@@ -1044,7 +1080,7 @@ Sevika Sangam
 </Box>
 
 {/* Senior Citizens */}
-<Box Container sx={{px:5 , py:5}}>
+<Box sx={{ px: { xs: 2, sm: 3, md: 5 }, py: { xs: 3, md: 5 } }}>
 
 <Box sx={{mb:5,mt:5, display:"flex", justifyContent:"space-between", alignItems:"center" ,gap:{xs:1 ,md:0}}}>
   <Typography variant='h5' sx={{ fontSize:{xs:'1.6rem', md:'2rem'} , fontWeight:"bold", }} >
@@ -1067,11 +1103,17 @@ Sevika Sangam
   {events
     .filter(e => e.title1 === "Kaisthana Sammidhi")
     .map((e, i) => (
-      <Box key={i} sx={{py:4, flex: '0 0 auto',   width: {
-      xs: '100%',     // ✅ full width on mobile
-      sm: '50%',      // tablet
-      md: '33.33%',   // desktop
-    }, }}>
+      <Box key={i} sx={{
+        py: 4,
+        px: { xs: 0, sm: 1, md: 1.5 },
+        flex: '0 0 auto',
+        width: {
+          xs: '100%',
+          sm: '50%',
+          md: '33.333%',
+        },
+        boxSizing: 'border-box',
+      }}>
          <Card
           sx={{
             minHeight: { xs: '380px', md: '440px' },
